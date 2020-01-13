@@ -27,15 +27,15 @@ public String pigLatin(String sWord)
 {
 	if(findFirstVowel(sWord) == -1)
 	{
-		return sWord + "ay";
+		return sWord + "ay";	
 	}
 	else if(sWord.substring(0,2).equals("qu"))
 	{
-		return sWord.substring()
+		return sWord.substring(2) + "quay" ;
 	}
-	else if(findFirstVowel(sWord) == 1)
+	else if(findFirstVowel(sWord) >= 1)
 	{
-		return sWord + "way";
+		return sWord.substring( findFirstVowel(sWord) ) + sWord.substring(0,findFirstVowel(sWord)) + "ay";
 	}
-	else if(findFirstVowel(sWord) == 2)
+	return sWord + "way";
 }
